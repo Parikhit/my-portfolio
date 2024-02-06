@@ -6,6 +6,8 @@ import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
 interface ThemeProviderProps {
     children: ReactNode;
+    attribute: string;
+    defaultTheme: string;
 }
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({ children, ...props }) => {
