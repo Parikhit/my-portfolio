@@ -4,13 +4,13 @@ import { ReactNode } from 'react';
 
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
-interface ThemeProviderProps {
+type ThemeProps = {
     children: ReactNode;
     attribute: string;
-    defaultTheme: string;
-}
+    defaultTheme: 'dark' | 'light';
+};
 
-const ThemeProvider: React.FC<ThemeProviderProps> = ({ children, ...props }) => {
+const ThemeProvider = ({ children, ...props }: ThemeProps) => {
     return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
 };
 
