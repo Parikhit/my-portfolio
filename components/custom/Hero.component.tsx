@@ -10,14 +10,13 @@ import { RiBriefcase4Fill, RiTeamFill, RiTodoFill, RiArrowDownSLine } from 'reac
 
 import { Typewriter } from 'react-simple-typewriter';
 
-type Props = {};
-
-const Hero = (props: Props) => {
+const Hero = () => {
     return (
         <section className='py-12 xl:py-24 h-[84vh] xl:pt-28'>
             <div className='container mx-auto'>
                 <div className='flex items-center justify-between'>
                     {/* Hero Texts */}
+
                     <div className='flex max-w-[700px] flex-col justify-center mx-auto xl:mx-0 xl:text-left'>
                         <div className='flex items-center gap-x-4 mb-4'>
                             <h2 className='text-2xl font-bold text-primary'>Hello World</h2>
@@ -60,14 +59,19 @@ const Hero = (props: Props) => {
                                     </Button>
                                 </Link>
                                 <Link href='/contact'>
-                                    <Button className='gap-x-2'>
-                                        Contact me <ArrowDownToLine size={18} />
+                                    <Button variant='secondary' className='gap-x-2'>
+                                        Download Resume
+                                        <ArrowDownToLine size={18} />
                                     </Button>
                                 </Link>
                             </div>
                         </div>
                     </div>
-                    <div className='xl:flex relative'>image</div>
+                    {/* Socials */}
+
+                    <div className='xl:flex relative'>
+                        <Socials />
+                    </div>
                 </div>
 
                 <div className='hidden md:flex absolute left-2/4 xl:bottom-12 animate-bounce'>
