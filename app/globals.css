@@ -57,3 +57,11 @@
         @apply bg-background text-foreground;
     }
 }
+
+.h1 {
+    @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold;
+}
+
+.h2 {
+    @apply text-xl xl:text-[45px] md:text-[30px] xl:leading-[50px] tracking-[-2px] font-bold;
+}

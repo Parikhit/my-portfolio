@@ -18,7 +18,7 @@ const Header = () => {
             window.scrollY > 50 ? setHeader(true) : setHeader(false);
         };
 
-        const scrollYPos = window.addEventListener('scroll', scrollHandler);
+        window.addEventListener('scroll', scrollHandler);
 
         return () => window.removeEventListener('scroll', scrollHandler);
     }, []);
@@ -27,7 +27,7 @@ const Header = () => {
         <header
             className={`${
                 header ? 'py-4 bg-white shadow-lg dark:bg-accent' : 'py-6 dark:bg-transparent'
-            } sticky top-0 z-30 transition-all`}
+            } sticky top-0 z-30 transition-all  ${pathname === '/' && 'bg-fuchsia-50'}`}
         >
             <div className='container mx-auto'>
                 <div className='flex justify-between items-center'>
