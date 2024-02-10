@@ -1,9 +1,15 @@
+'use client';
+
+import { NextUIProvider } from '@nextui-org/react';
+
 import Hero from '@/components/custom/Hero.component';
 
 export default function Home() {
     return (
         <main>
-            <Hero />
+            <NextUIProvider>
+                <Hero />
+            </NextUIProvider>
         </main>
     );
 }

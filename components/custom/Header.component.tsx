@@ -11,7 +11,6 @@ import MobileNav from './MobileNav.component';
 const Header = () => {
     const [header, setHeader] = useState(false);
     const pathname = usePathname();
-    console.log(pathname);
 
     useEffect(() => {
         const scrollHandler = () => {
@@ -35,14 +34,14 @@ const Header = () => {
                     <div className='flex items-center gap-x-6'>
                         {/* Navbar */}
                         <Navbar
-                            containerStyles='hidden xl:flex gap-x-8 items-center'
+                            containerStyles='hidden xl:flex lg:flex gap-x-8 items-center'
                             linkStyles='relative hover:text-primary transition-all'
                             underlineStyles='absolute left-0 top-full h-[2px] bg-primary w-full'
                         />
                         <ThemeToggler />
 
                         {/* Mobile Navbar */}
-                        <div className='xl:hidden'>
+                        <div className='xl:hidden lg:hidden'>
                             <MobileNav />
                         </div>
                     </div>

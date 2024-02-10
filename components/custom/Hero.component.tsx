@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import Socials from './Socials.component';
 
 import { ArrowDownToLine, Contact } from 'lucide-react';
-import { RiBriefcase4Fill, RiTeamFill, RiTodoFill, RiArrowDownSLine } from 'react-icons/ri';
+import { RiArrowDownSLine } from 'react-icons/ri';
 
 import { Typewriter } from 'react-simple-typewriter';
 
@@ -35,10 +35,10 @@ const Hero = () => {
                                 <span className='text-primary'>
                                     <Typewriter
                                         words={[
-                                            'MERN Developer',
-                                            'NEXT.js Developer',
-                                            'React Native Developer',
-                                            'Freelancer',
+                                            ' MERN Developer',
+                                            ' NEXT.js Developer',
+                                            ' React Native Developer',
+                                            ' Freelancer',
                                         ]}
                                         loop={0}
                                         cursor
@@ -54,12 +54,15 @@ const Hero = () => {
 
                             <div className='flex flex-col xl:flex-row md:flex-row gap-x-4 gap-y-4 mx-auto'>
                                 <Link href='/contact'>
-                                    <Button className='gap-x-2'>
+                                    <Button className='gap-x-2 hover:animate-bounce'>
                                         Contact me <Contact size={18} />
                                     </Button>
                                 </Link>
                                 <Link href='/contact'>
-                                    <Button variant='secondary' className='gap-x-2'>
+                                    <Button
+                                        variant='secondary'
+                                        className='gap-x-2 hover:animate-bounce'
+                                    >
                                         Download Resume
                                         <ArrowDownToLine size={18} />
                                     </Button>
@@ -69,9 +72,13 @@ const Hero = () => {
                     </div>
                     {/* Socials */}
 
-                    <div className='xl:flex relative'>
+                    <div className='hidden xl:flex lg:flex'>
                         <Socials />
                     </div>
+                </div>
+                {/* Mobile Version */}
+                <div className='flex items-center justify-center xl:hidden lg:hidden my-4'>
+                    <Socials />
                 </div>
 
                 <div className='hidden md:flex absolute left-2/4 xl:bottom-12 animate-bounce'>

@@ -1,10 +1,18 @@
 import Link from 'next/link';
-import Image from 'next/image';
+
+// import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar } from '@nextui-org/react';
 
 const Logo = () => {
     return (
         <Link href='/'>
-            <Image src='/logo.svg' priority width={100} height={100} alt='logo' />
+            <Avatar
+                showFallback
+                isBordered
+                color='success'
+                src='/avatar.jpg'
+                className='w-20 h-20 text-large'
+            />
         </Link>
     );
 };
