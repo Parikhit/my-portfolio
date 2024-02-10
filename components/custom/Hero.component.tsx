@@ -73,12 +73,12 @@ const Hero = () => {
                     {/* Socials */}
 
                     <div className='hidden xl:flex lg:flex'>
-                        <Socials />
+                        <Socials size={30} />
                     </div>
                 </div>
                 {/* Mobile Version */}
                 <div className='flex items-center justify-center xl:hidden lg:hidden my-4'>
-                    <Socials />
+                    <Socials size={24} />
                 </div>
 
                 <div className='hidden md:flex absolute left-2/4 xl:bottom-12 animate-bounce'>

@@ -4,9 +4,9 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 
 type NavbarProps = {
-    containerStyles: string;
-    linkStyles: string;
-    underlineStyles: string;
+    containerStyles?: string;
+    linkStyles?: string;
+    underlineStyles?: string;
 };
 
 const links = [

@@ -16,7 +16,10 @@ const MobileNav = (props: Props) => {
             <SheetContent>
                 <div>
                     <div>
-                        <Navbar />
+                        <Navbar
+                            containerStyles='flex flex-col items-center gap-y-4'
+                            linkStyles='text-2xl'
+                        />
                     </div>
                 </div>
             </SheetContent>

@@ -1,30 +1,33 @@
 import Link from 'next/link';
 
 import { FaLinkedin, FaGithub, FaXTwitter, FaFacebook, FaInstagram } from 'react-icons/fa6';
-
 import { Button } from '../ui/button';
 
-const Socials = () => {
+type SocialsProps = {
+    size?: number;
+};
+
+const Socials = ({ size }: SocialsProps) => {
     const socialsArr = [
         {
-            icon: <FaLinkedin size={30} />,
+            icon: <FaLinkedin size={size} />,
             link: 'https://www.linkedin.com/in/parikhitbaruah97/',
         },
         {
-            icon: <FaGithub size={30} />,
+            icon: <FaGithub size={size} />,
             link: 'https://github.com/Parikhit',
         },
         {
-            icon: <FaFacebook size={30} />,
+            icon: <FaFacebook size={size} />,
             link: 'https://www.facebook.com/parikhitb1',
         },
 
         {
-            icon: <FaXTwitter size={30} />,
+            icon: <FaXTwitter size={size} />,
             link: 'https://twitter.com/Parikhitb97',
         },
         {
-            icon: <FaInstagram size={30} />,
+            icon: <FaInstagram size={size} />,
             link: 'https://www.instagram.com/codeventures.js/',
         },
     ];
