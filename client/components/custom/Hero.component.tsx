@@ -12,7 +12,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const Hero = () => {
     return (
-        <section className='py-12 xl:py-24 h-[84vh] xl:pt-28'>
+        <section id='home' className='py-12 xl:py-24 h-[84vh] xl:pt-28'>
             <div className='container mx-auto'>
                 <div className='flex items-center justify-between'>
                     {/* Hero Texts */}
@@ -70,6 +70,7 @@ const Hero = () => {
                             </div>
                         </div>
                     </div>
+
                     {/* Socials */}
 
                     <div className='hidden xl:flex lg:flex'>
@@ -77,8 +78,8 @@ const Hero = () => {
                     </div>
                 </div>
                 {/* Mobile Version */}
-                <div className='flex items-center justify-center xl:hidden lg:hidden my-4'>
-                    <Socials size={24} />
+                <div className='w-auto flex items-center justify-center xl:hidden lg:hidden my-4'>
+                    <Socials size={18} margin={2} />
                 </div>
 
                 <div className='hidden md:flex absolute left-2/4 xl:bottom-12 animate-bounce'>

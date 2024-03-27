@@ -33,11 +33,7 @@ const Header = () => {
                     <Logo />
                     <div className='flex items-center gap-x-6'>
                         {/* Navbar */}
-                        <Navbar
-                            containerStyles='hidden xl:flex lg:flex gap-x-8 items-center'
-                            linkStyles='relative hover:text-primary transition-all'
-                            underlineStyles='absolute left-0 top-full h-[2px] bg-primary w-full'
-                        />
+                        <Navbar />
                         <ThemeToggler />
 
                         {/* Mobile Navbar */}

@@ -5,9 +5,10 @@ import { Button } from '../ui/button';
 
 type SocialsProps = {
     size?: number;
+    margin?: number;
 };
 
-const Socials = ({ size }: SocialsProps) => {
+const Socials = ({ size, margin }: SocialsProps) => {
     const socialsArr = [
         {
             icon: <FaLinkedin size={size} />,
@@ -34,8 +35,12 @@ const Socials = ({ size }: SocialsProps) => {
     return (
         <div className='flex xl:flex-col lg:flex-col md:flex-row mx-6'>
             {socialsArr.map((social, index) => (
-                <Link key={index} href={social.link} target='_blank'>
-                    <Button className='mb-4 hover:animate-spin' variant='ghost' size='socials'>
+                <Link key={index} href={social.link} target='_blank' className={`${margin}`}>
+                    <Button
+                        className='mb-4 hover:animate-spin mx-[-3px]'
+                        variant='ghost'
+                        size='socials'
+                    >
                         {social.icon}
                     </Button>
                 </Link>
