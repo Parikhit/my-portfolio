@@ -1,67 +1,47 @@
 import { Link } from 'react-scroll';
-
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import clsx from 'clsx';
 
 const links = [
-    { path: '/', name: 'home' },
-    { path: '/projects', name: 'my projects' },
-    { path: '/contact', name: 'contact' },
+    { path: 'home', name: 'Home' },
+    { path: 'projects', name: 'Projects' },
+    { path: 'skills', name: 'Skills' },
+    { path: 'experience', name: 'Experience' },
+    { path: 'contacts', name: 'Contact' },
 ];
 
-const Navbar = () => {
+type NavbarProps = {
+    style: String;
+};
+
+const Navbar = ({ style }: NavbarProps) => {
+    const [activeSection, setActiveSection] = useState('Home');
     return (
-        <motion.nav>
-            <Link
-                activeClass='active'
-                to='home'
-                spy={true}
-                smooth={true}
-                offset={-120}
-                duration={500}
-            >
-                Home
-            </Link>
-            <Link
-                activeClass='active'
-                to='projects'
-                spy={true}
-                smooth={true}
-                offset={-140}
-                duration={500}
-            >
-                Projects
-            </Link>
-            <Link
-                activeClass='active'
-                to='skills'
-                spy={true}
-                smooth={true}
-                offset={100}
-                duration={500}
-            >
-                Skills
-            </Link>
-            <Link
-                activeClass='active'
-                to='experience'
-                spy={true}
-                smooth={true}
-                offset={100}
-                duration={500}
-            >
-                Experience
-            </Link>
-            <Link
-                activeClass='active'
-                to='contacts'
-                spy={true}
-                smooth={true}
-                offset={100}
-                duration={500}
-            >
-                Contact
-            </Link>
-        </motion.nav>
+        <nav className={`${style} gap-4 text-2xl`}>
+            {links.map((link) => {
+                const { path, name } = link;
+                return (
+                    <Link
+                        className={clsx('relative cursor-pointer', {
+                            'text-rose-600': activeSection === name,
+                        })}
+                        key={name}
+                        to={path}
+                        spy={true}
+                        smooth={true}
+                        offset={-180}
+                        duration={500}
+                        onClick={() => setActiveSection(link.name)}
+                    >
+                        {name}
+
+                        {link.name === activeSection && (
+                            <div className='bg-rose-600 h-1 w-full rounded bottom-0 absolute -z-10'></div>
+                        )}
+                    </Link>
+                );
+            })}
+        </nav>
     );
 };
 

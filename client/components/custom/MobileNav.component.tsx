@@ -13,10 +13,7 @@ const MobileNav = () => {
             <SheetContent>
                 <div className='h-full'>
                     <div className='h-full flex flex-col items-center my-4 justify-between'>
-                        <Navbar
-                            containerStyles='flex flex-col items-center gap-y-4'
-                            linkStyles='text-2xl'
-                        />
+                        <Navbar style={'flex flex-col items-center'} />
                         <Socials size={16} />
                     </div>
                 </div>

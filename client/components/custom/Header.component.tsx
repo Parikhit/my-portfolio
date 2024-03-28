@@ -31,15 +31,15 @@ const Header = () => {
             <div className='container mx-auto'>
                 <div className='flex justify-between items-center'>
                     <Logo />
-                    <div className='flex items-center gap-x-6'>
+                    <div className='hidden sm:flex items-center gap-x-6'>
                         {/* Navbar */}
-                        <Navbar />
+                        <Navbar style={'flex'} />
                         <ThemeToggler />
-
-                        {/* Mobile Navbar */}
-                        <div className='xl:hidden lg:hidden'>
-                            <MobileNav />
-                        </div>
+                    </div>
+                    {/* Mobile Navbar */}
+                    <div className='flex items-center gap-8 sm:hidden'>
+                        <ThemeToggler />
+                        <MobileNav />
                     </div>
                 </div>
             </div>

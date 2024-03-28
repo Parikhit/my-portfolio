@@ -35,9 +35,14 @@ const Socials = ({ size, margin }: SocialsProps) => {
     return (
         <div className='flex xl:flex-col lg:flex-col md:flex-row mx-6'>
             {socialsArr.map((social, index) => (
-                <Link key={index} href={social.link} target='_blank' className={`${margin}`}>
+                <Link
+                    key={index}
+                    href={social.link}
+                    target='_blank'
+                    className={`${margin}`}
+                >
                     <Button
-                        className='mb-4 hover:animate-spin mx-[-3px]'
+                        className='mb-4 hover:animate-appearance-in mx-[-3px]'
                         variant='ghost'
                         size='socials'
                     >
