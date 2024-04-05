@@ -14,7 +14,10 @@ import { FaGithub, FaLink } from 'react-icons/fa6';
 
 const ProjectCard = ({ title, preview, description, techStack, github, link }) => {
     return (
-        <Card key={title} className='hover:opacity-90 text-lg hover:border-blue-700'>
+        <Card
+            key={title}
+            className='text-lg hover:border-blue-700 hover:scale-105 transition-transform shadow-xl'
+        >
             <CardHeader>
                 <CardTitle>{title}</CardTitle>
                 <Image

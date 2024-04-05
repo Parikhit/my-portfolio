@@ -12,11 +12,16 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const Hero = () => {
     return (
-        <section id='home' className='py-12 xl:py-24 h-[74vh] xl:pt-28'>
+        <section id='home' className='relative z-10 py-12 xl:py-24 h-[74vh] xl:pt-10'>
             <div className='container mx-auto'>
                 <div className='flex items-center justify-between'>
-                    {/* Hero Texts */}
+                    {/* 
+                <div className='absolute w-1/2 sm:full flex justify-between -z-10'>
+                    <div className='w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] bg-gradient-to-b from-[#f539aa] to-[#fe6c4c] rounded-full blur-[80px] animate-third sm:blur-[120px]'></div>
+                    <div className='w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] bg-gradient-to-t from-cyan-400 to-cyan-300 rounded-full blur-[80px] animate-third sm:blur-[120px]'></div>
+                </div> */}
 
+                    {/* Hero Texts */}
                     <div className='flex max-w-[700px] flex-col justify-center mx-auto xl:mx-0 xl:text-left'>
                         <div className='flex items-center gap-x-4 mb-4'>
                             <h2 className='text-2xl font-bold text-rose-700'>Hello World</h2>
@@ -53,7 +58,7 @@ const Hero = () => {
                             {/* Buttons */}
 
                             <div className='flex flex-col xl:flex-row md:flex-row gap-x-4 gap-y-4 mx-auto'>
-                                <Link href='/contact'>
+                                <Link href='/'>
                                     <Button
                                         variant='default'
                                         className='gap-x-2 hover:scale-105 bg-blue-700 hover:bg-blue-600'
@@ -61,18 +66,16 @@ const Hero = () => {
                                         Contact me <Contact size={18} />
                                     </Button>
                                 </Link>
-                                <Link href='/contact'>
-                                    <Button variant='secondary' className='gap-x-2 hover:scale-105'>
+                                <a href='demo-resume.pdf' target='_blank'>
+                                    <Button variant='outline' className='gap-x-2 hover:scale-105'>
                                         Download Resume
                                         <ArrowDownToLine size={18} />
                                     </Button>
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>
-
                     {/* Socials */}
-
                     <div className='hidden xl:flex lg:flex'>
                         <Socials size={30} />
                     </div>

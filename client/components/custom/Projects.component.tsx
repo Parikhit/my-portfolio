@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 
 import { Button } from '../ui/button';
 
@@ -7,16 +7,19 @@ import CardsPreview from './CardsPreview.component';
 
 const Projects = () => {
     const [projectCards, setProjectCards] = useState(<CardsPreview />);
-    const ref = useRef(null);
 
     const onPressHandler = () => setProjectCards(<ProjectCards />);
 
     return (
-        <div id='projects' className='max-w-5xl mx-auto px-8  mb-20'>
+        <div id='projects' className='relative z-10 max-w-5xl mx-auto px-8 mb-44'>
+            {/* <div className='w-full h-full absolute top-80 right-8 flex justify-start -z-10'>
+                <div className='w-[600px] h-[600px] sm:w-[500px] sm:h-[500px] bg-gradient-to-t from-cyan-400 to-cyan-300 rounded-full blur-[80px] animate-sixth sm:blur-[140px]'></div>
+            </div> */}
+
             <h1 className='text-rose-700 text-4xl text-center font-semibold'>Projects</h1>
             <div
                 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4
-            mt-8 hover:border-white'
+            mt-8'
             >
                 {projectCards}
             </div>

@@ -1,5 +1,6 @@
 import { Link } from 'react-scroll';
 import { useState } from 'react';
+
 import clsx from 'clsx';
 
 const links = [
@@ -16,10 +17,12 @@ type NavbarProps = {
 
 const Navbar = ({ style }: NavbarProps) => {
     const [activeSection, setActiveSection] = useState('Home');
+
     return (
         <nav className={`${style} gap-4 text-2xl`}>
             {links.map((link) => {
                 const { path, name } = link;
+
                 return (
                     <Link
                         className={clsx('relative cursor-pointer', {
@@ -29,13 +32,15 @@ const Navbar = ({ style }: NavbarProps) => {
                         to={path}
                         spy={true}
                         smooth={true}
-                        offset={-180}
+                        offset={-190}
                         duration={500}
-                        onClick={() => setActiveSection(link.name)}
+                        onClick={() => {
+                            setActiveSection(name);
+                        }}
                     >
                         {name}
 
-                        {link.name === activeSection && (
+                        {name === activeSection && (
                             <div className='bg-rose-600 h-1 w-full rounded bottom-0 absolute -z-10'></div>
                         )}
                     </Link>

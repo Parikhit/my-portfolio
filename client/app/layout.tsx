@@ -9,7 +9,7 @@ import ThemeProvider from '@/components/custom/ThemeProvider.component';
 const titilliumWeb = Titillium_Web({ subsets: ['latin'], weight: '400' });
 
 export const metadata: Metadata = {
-    title: 'My Portfolio',
+    title: "Parikhit's Portfolio",
     description: 'Portfolio website of Parikhit Baruah',
 };
 
