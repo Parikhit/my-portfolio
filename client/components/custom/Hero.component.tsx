@@ -15,8 +15,8 @@ const Hero = () => {
             <div className='container mx-auto'>
                 <div className='flex items-center justify-between'>
                     <div className='absolute w-1/2 sm:full flex justify-between -z-10'>
-                        <div className='w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] bg-gradient-to-b from-[#f539aa] to-[#fe6c4c] rounded-full blur-[80px] animate-third sm:blur-[160px]'></div>
-                        <div className='w-[200px] h-[200px] sm:w-[500px] sm:h-[500px] bg-gradient-to-t from-cyan-400 to-cyan-300 rounded-full blur-[80px] animate-third sm:blur-[160px]'></div>
+                        <div className='w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] bg-gradient-to-b from-[#f539aa] to-[#fe6c4c] rounded-full blur-[80px] sm:animate-third sm:blur-[160px]'></div>
+                        <div className='w-[300px] h-300px] sm:w-[500px] sm:h-[500px] bg-gradient-to-t from-cyan-400 to-cyan-300 rounded-full blur-[80px] sm:animate-third sm:blur-[160px]'></div>
                     </div>
 
                     {/* Hero Texts */}
