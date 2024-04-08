@@ -7,8 +7,6 @@ const addUserData = require('./controller/user.controller');
 const mongoose = require('mongoose');
 dotenv.config();
 
-const PORT = 8000;
-
 const app = express();
 
 app.use(express.json());
@@ -26,8 +24,8 @@ const startServer = () => {
         .then(() => console.log('Connected to MongoDB'))
         .catch((error) => console.log(error));
 
-    app.listen(PORT, () => {
-        console.log(`Server is running on ${PORT}`);
+    app.listen(process.env.PORT, () => {
+        console.log(`Server is running on ${process.env.PORT}`);
     });
 };
 
