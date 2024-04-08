@@ -71,7 +71,7 @@ const Hero = () => {
                                         Contact me <Contact size={18} />
                                     </Button>
                                 </ScrollLink>
-                                <a href='demo-resume.pdf' target='_blank'>
+                                <a href='Parikhits_updated_CV.pdf' target='_blank'>
                                     <Button variant='outline' className='gap-x-2 hover:scale-105'>
                                         Download Resume
                                         <ArrowDownToLine size={18} />
