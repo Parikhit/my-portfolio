@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(
     cors({
-        origin: 'http://localhost:3000' || 'https://parikhits-portfolio-api.vercel.app/',
+        origin: 'https://parikhits-portfolio-api.vercel.app/',
     })
 );
 
