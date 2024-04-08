@@ -25,9 +25,12 @@ const Navbar = ({ style }: NavbarProps) => {
 
                 return (
                     <Link
-                        className={clsx('relative cursor-pointer', {
-                            'text-rose-600': activeSection === name,
-                        })}
+                        className={clsx(
+                            'relative cursor-pointer hover:scale-110 transition-transform',
+                            {
+                                'text-rose-600': activeSection === name,
+                            }
+                        )}
                         key={name}
                         to={path}
                         spy={true}

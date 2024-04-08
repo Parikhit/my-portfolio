@@ -1,5 +1,5 @@
 'use client';
-
+import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -15,11 +15,10 @@ const Hero = () => {
         <section id='home' className='relative z-10 py-12 xl:py-24 h-[74vh] xl:pt-10'>
             <div className='container mx-auto'>
                 <div className='flex items-center justify-between'>
-                    {/* 
-                <div className='absolute w-1/2 sm:full flex justify-between -z-10'>
-                    <div className='w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] bg-gradient-to-b from-[#f539aa] to-[#fe6c4c] rounded-full blur-[80px] animate-third sm:blur-[120px]'></div>
-                    <div className='w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] bg-gradient-to-t from-cyan-400 to-cyan-300 rounded-full blur-[80px] animate-third sm:blur-[120px]'></div>
-                </div> */}
+                    <div className='absolute w-1/2 sm:full flex justify-between -z-10'>
+                        <div className='w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] bg-gradient-to-b from-[#f539aa] to-[#fe6c4c] rounded-full blur-[80px] animate-third sm:blur-[160px]'></div>
+                        <div className='w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] bg-gradient-to-t from-cyan-400 to-cyan-300 rounded-full blur-[80px] animate-third sm:blur-[160px]'></div>
+                    </div>
 
                     {/* Hero Texts */}
                     <div className='flex max-w-[700px] flex-col justify-center mx-auto xl:mx-0 xl:text-left'>
@@ -31,6 +30,7 @@ const Hero = () => {
                                 priority
                                 width={40}
                                 height={40}
+                                style={{ width: 'auto', height: 'auto' }}
                             />
                         </div>
                         <div>
@@ -58,14 +58,20 @@ const Hero = () => {
                             {/* Buttons */}
 
                             <div className='flex flex-col xl:flex-row md:flex-row gap-x-4 gap-y-4 mx-auto'>
-                                <Link href='/'>
+                                <ScrollLink
+                                    to='contacts'
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-190}
+                                    duration={500}
+                                >
                                     <Button
                                         variant='default'
                                         className='gap-x-2 hover:scale-105 bg-blue-700 hover:bg-blue-600'
                                     >
                                         Contact me <Contact size={18} />
                                     </Button>
-                                </Link>
+                                </ScrollLink>
                                 <a href='demo-resume.pdf' target='_blank'>
                                     <Button variant='outline' className='gap-x-2 hover:scale-105'>
                                         Download Resume

@@ -10,7 +10,7 @@ import Skills from '@/components/custom/Skills.component';
 
 export default function Home() {
     return (
-        <main>
+        <main className=''>
             <NextUIProvider>
                 <Hero />
                 <Projects />

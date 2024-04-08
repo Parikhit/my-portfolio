@@ -12,11 +12,11 @@ const Projects = () => {
 
     return (
         <div id='projects' className='relative z-10 max-w-5xl mx-auto px-8 mb-44'>
-            {/* <div className='w-full h-full absolute top-80 right-8 flex justify-start -z-10'>
-                <div className='w-[600px] h-[600px] sm:w-[500px] sm:h-[500px] bg-gradient-to-t from-cyan-400 to-cyan-300 rounded-full blur-[80px] animate-sixth sm:blur-[140px]'></div>
-            </div> */}
+            <div className='absolute -z-10 w-full top-80 right-8 flex justify-end items-start'>
+                <div className='w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] bg-gradient-to-b from-[#f539aa] to-[#fe6c4c] rounded-full blur-[80px] animate-fourth sm:blur-[200px]'></div>
+            </div>
 
-            <h1 className='text-rose-700 text-4xl text-center font-semibold'>Projects</h1>
+            <h1 className='text-rose-700 text-4xl text-center font-extrabold '>Projects</h1>
             <div
                 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4
             mt-8'

@@ -14,8 +14,8 @@ import {
 
 const Experience = () => {
     return (
-        <div id='experience' className='mb-36'>
-            <h1 className='text-rose-700 text-4xl text-center font-semibold mb-8'>
+        <div id='experience' className='mb-12 relative z-10'>
+            <h1 className='text-rose-700 text-4xl text-center font-extrabold mb-8'>
                 Experience and Education
             </h1>
 
@@ -24,6 +24,7 @@ const Experience = () => {
                     const { title, profile, description, duration, icon } = element;
                     return (
                         <VerticalTimelineElement
+                            key={title}
                             contentStyle={{
                                 background: 'transparent',
                             }}

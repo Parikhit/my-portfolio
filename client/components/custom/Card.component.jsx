@@ -33,8 +33,8 @@ const ProjectCard = ({ title, preview, description, techStack, github, link }) =
             <CardContent>
                 <CardDescription className='text-md'>{description}</CardDescription>
             </CardContent>
-            <div className='flex gap-2 items-center p-3'>
-                <div className='text-blue-700 text-base font-semibold px-2'>Tech Used:</div>
+            <div className='flex gap-2 ml-6 items-center p-3'>
+                {/* <div className='text-blue-700 text-base font-semibold px-2'>Tech Used:</div> */}
                 {techStack.map((tech, id) => (
                     <p key={id} className='hover:scale-125'>
                         {tech}
@@ -42,7 +42,7 @@ const ProjectCard = ({ title, preview, description, techStack, github, link }) =
                 ))}
             </div>
             <CardFooter>
-                <div className='w-full flex items-center justify-between'>
+                <div className='w-full flex items-center justify-between mx-3'>
                     <Link
                         className='flex gap-2 items-center font-medium hover:scale-125'
                         href={github}

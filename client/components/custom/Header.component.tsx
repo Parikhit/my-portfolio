@@ -26,11 +26,16 @@ const Header = () => {
         <header
             className={`${
                 header ? 'py-4 bg-white shadow-lg dark:bg-accent' : 'py-6 dark:bg-transparent'
-            } sticky top-0 z-20 transition-all  ${pathname === '/' && 'bg-fuchsia-50'}`}
+            } sticky top-0 z-20 transition-all  ${pathname === '/' && 'bg-slate-50 shadow-md'}`}
         >
             <div className='container mx-auto'>
                 <div className='flex justify-between items-center'>
-                    <Logo />
+                    <span className='text-lg font-light flex flex-col sm:flex-row sm:items-end gap-1 text-green-400'>
+                        <Logo />
+                        <div className='hover:scale-110 transition-transform mb-[-6px]'>
+                            /open to work
+                        </div>
+                    </span>
                     <div className='hidden sm:flex items-center gap-x-6'>
                         {/* Navbar */}
                         <Navbar style={'flex'} />

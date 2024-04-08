@@ -5,7 +5,7 @@ import { Avatar } from '@nextui-org/react';
 
 const Logo = () => {
     return (
-        <Link href='/'>
+        <Link href='/' className='hover:scale-110 transition-transform'>
             <Avatar
                 showFallback
                 isBordered
