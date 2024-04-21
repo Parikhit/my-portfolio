@@ -17,7 +17,7 @@ const MobileNav = () => {
             </SheetTrigger>
 
             <SheetContent>
-                <div className='h-full'>
+                <div className='h-full p-2'>
                     <div className='h-full flex flex-col items-center my-4 justify-between'>
                         <nav className='flex flex-col items-center gap-4 text-2xl'>
                             {links.map((link) => {
