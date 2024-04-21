@@ -1,7 +1,7 @@
 import { Button } from '../ui/button';
 import { useState } from 'react';
 
-const API_URL = 'http://localhost:8000';
+const API_URL = 'https://my-portfolio-api-q606.onrender.com';
 
 const Contact = () => {
     const [disabledButton, setDisabledButton] = useState(false);
@@ -66,7 +66,10 @@ const Contact = () => {
     };
 
     return (
-        <div id='contacts' className='relative mt-72 z-10'>
+        <div
+            id='contacts'
+            className='relative mt-72 z-10'
+        >
             <div className='absolute left-8 bottom-8 flex justify-start -z-10'>
                 <div className='w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] bg-gradient-to-b from-[#f539aa] to-[#fe6c4c] rounded-full blur-[80px] animate-third sm:blur-[200px]'></div>
             </div>
@@ -74,7 +77,10 @@ const Contact = () => {
             <h1 className='text-rose-700 text-4xl text-center font-extrabold mb-14'>Contact Me</h1>
 
             <div className='relative z-10 max-w-xl mx-auto px-8'>
-                <form onSubmit={handleFormSubmit} className='flex flex-col gap-2'>
+                <form
+                    onSubmit={handleFormSubmit}
+                    className='flex flex-col gap-2'
+                >
                     <input
                         name='name'
                         type='text'
