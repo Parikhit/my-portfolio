@@ -1,15 +1,9 @@
 import { Link } from 'react-scroll';
 import { useState } from 'react';
 
-import clsx from 'clsx';
+import { links } from '../../lib/nav-links';
 
-const links = [
-    { path: 'home', name: 'Home' },
-    { path: 'projects', name: 'Projects' },
-    { path: 'skills', name: 'Skills' },
-    { path: 'experience', name: 'Experience' },
-    { path: 'contacts', name: 'Contact' },
-];
+import clsx from 'clsx';
 
 type NavbarProps = {
     style: String;

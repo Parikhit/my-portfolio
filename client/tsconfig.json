@@ -31,6 +31,6 @@
         "components/custom/Navbar.component.tsx",
         "components/custom/Header.component.tsx",
         "lib/data.js"
-, "components/custom/Card.component.jsx", "components/custom/Cards.component.jsx", "components/custom/Skills.component.jsx", "components/custom/Experience.component.jsx", "components/custom/Contact.component.jsx", "components/custom/Footer.component.jsx"    ],
+, "components/custom/Card.component.jsx", "components/custom/Cards.component.jsx", "components/custom/Skills.component.jsx", "components/custom/Experience.component.jsx", "components/custom/Contact.component.jsx", "components/custom/Footer.component.jsx", "components/custom/MobileNav.component.jsx"    ],
     "exclude": ["node_modules"]
 }
