@@ -1,8 +1,11 @@
 const express = require('express');
 const cors = require('cors');
+import path from 'path';
 const dotenv = require('dotenv');
 
 const addUserData = require('./controller/user.controller');
+
+const __dirname = path.resolve();
 
 const mongoose = require('mongoose');
 dotenv.config();
@@ -23,6 +26,12 @@ app.post('/', addUserData);
 app.use('/', (req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('Hello World!');
+});
+
+app.use(express.static(path.join(__dirname, '/client/build')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
 const startServer = () => {
