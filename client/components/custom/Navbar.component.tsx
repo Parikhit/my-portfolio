@@ -30,7 +30,7 @@ const Navbar = ({ style }: NavbarProps) => {
                         spy={true}
                         smooth={true}
                         offset={-190}
-                        duration={500}
+                        duration={800}
                         onClick={() => {
                             setActiveSection(name);
                         }}

@@ -38,7 +38,7 @@ const MobileNav = () => {
                                             spy={true}
                                             smooth={true}
                                             offset={-190}
-                                            duration={500}
+                                            duration={1000}
                                             onClick={() => {
                                                 setActiveSection(name);
                                             }}
