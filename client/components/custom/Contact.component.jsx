@@ -43,8 +43,7 @@ const Contact = () => {
         }
     };
 
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
+    const handleFormSubmit = () => {
         const data = new FormData(e.target);
         const name = data.get('name');
         const email = data.get('email');
