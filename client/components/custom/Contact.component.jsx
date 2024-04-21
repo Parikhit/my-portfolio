@@ -19,7 +19,7 @@ const Contact = () => {
         setDisabledButton(true);
         setLoading(true);
         try {
-            const res = await fetch('http://localhost:8000', {
+            const res = await fetch('https://my-portfolio-api-q606.onrender.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
