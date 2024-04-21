@@ -10,9 +10,20 @@ const Footer = () => {
             <div className='flex items-center justify-center gap-2 text-lg'>
                 <h1>Made with ❤️ using </h1>
                 <div className='flex'>
-                    <TbBrandNextjs size={30} className='hover:scale-125' />{' '}
-                    <FaNodeJs size={30} className='hover:scale-125' style={{ color: 'green' }} />{' '}
-                    <DiMongodb size={30} className='hover:scale-125' style={{ color: 'green' }} />
+                    <TbBrandNextjs
+                        size={30}
+                        className='hover:scale-125'
+                    />{' '}
+                    <FaNodeJs
+                        size={30}
+                        className='hover:scale-125'
+                        style={{ color: 'green' }}
+                    />{' '}
+                    <DiMongodb
+                        size={30}
+                        className='hover:scale-125'
+                        style={{ color: 'green' }}
+                    />
                 </div>
             </div>
             <div className='flex items-center justify-center gap-2'>
