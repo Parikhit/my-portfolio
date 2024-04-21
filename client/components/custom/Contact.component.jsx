@@ -60,7 +60,7 @@ const Contact = () => {
             className='relative mt-72 z-10'
         >
             <div className='absolute left-8 bottom-8 flex justify-start -z-10'>
-                <div className='w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] bg-gradient-to-b from-[#f539aa] to-[#fe6c4c] rounded-full blur-[80px] animate-third sm:blur-[200px]'></div>
+                <div className='w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] bg-gradient-to-b from-[#f539aa] to-[#fe6c4c] rounded-full blur-[80px] animate-third sm:blur-[200px] overflow-x-hidden'></div>
             </div>
 
             <h1 className='text-rose-700 text-4xl text-center font-extrabold mb-14'>Contact Me</h1>

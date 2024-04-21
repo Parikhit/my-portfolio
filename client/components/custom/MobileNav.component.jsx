@@ -3,13 +3,14 @@ import { Link } from 'react-scroll';
 
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '../ui/sheet';
 import { AlignJustify } from 'lucide-react';
-import Footer from './Footer.component';
 
 import { links } from '../../lib/nav-links';
 import clsx from 'clsx';
 
 const MobileNav = () => {
     const [activeSection, setActiveSection] = useState('Home');
+
+    const year = new Date().getFullYear();
     return (
         <Sheet>
             <SheetTrigger asChild>
@@ -52,8 +53,10 @@ const MobileNav = () => {
                                 );
                             })}
                         </nav>
-
-                        <Footer />
+                        <div className='flex flex-col items-center justify-center gap-2'>
+                            <div>Copyright &#9400; {year}</div>
+                            <div className='text-rose-700 font-semibold'> Parikhit Baruah</div>
+                        </div>
                     </div>
                 </div>
             </SheetContent>

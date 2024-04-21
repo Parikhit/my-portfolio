@@ -11,12 +11,15 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const Hero = () => {
     return (
-        <section id='home' className='relative z-10 py-12 xl:py-24 h-[74vh] xl:pt-10'>
+        <section
+            id='home'
+            className='relative z-10 py-12 xl:py-24 h-[74vh] xl:pt-10'
+        >
             <div className='container mx-auto'>
                 <div className='flex items-center justify-between'>
                     <div className='absolute w-1/2 sm:full flex justify-between -z-10'>
-                        <div className='w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] bg-gradient-to-b from-[#f539aa] to-[#fe6c4c] rounded-full blur-[80px] sm:animate-third sm:blur-[160px]'></div>
-                        <div className='w-[300px] h-300px] sm:w-[500px] sm:h-[500px] bg-gradient-to-t from-cyan-400 to-cyan-300 rounded-full blur-[80px] sm:animate-third sm:blur-[160px]'></div>
+                        <div className='w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] bg-gradient-to-b from-[#f539aa] to-[#fe6c4c] rounded-full blur-[80px] sm:animate-third sm:blur-[160px]  overflow-x-hidden'></div>
+                        <div className='w-[300px] h-300px] sm:w-[500px] sm:h-[500px] bg-gradient-to-t from-cyan-400 to-cyan-300 rounded-full blur-[80px] sm:animate-third sm:blur-[160px]  overflow-x-hidden'></div>
                     </div>
 
                     {/* Hero Texts */}
@@ -71,8 +74,14 @@ const Hero = () => {
                                         Contact me <Contact size={18} />
                                     </Button>
                                 </ScrollLink>
-                                <a href='Parikhits_updated_CV.pdf' target='_blank'>
-                                    <Button variant='outline' className='gap-x-2 hover:scale-105'>
+                                <a
+                                    href='Parikhits_updated_CV.pdf'
+                                    target='_blank'
+                                >
+                                    <Button
+                                        variant='outline'
+                                        className='gap-x-2 hover:scale-105'
+                                    >
                                         Download Resume
                                         <ArrowDownToLine size={18} />
                                     </Button>
@@ -87,7 +96,10 @@ const Hero = () => {
                 </div>
                 {/* Mobile Version */}
                 <div className='w-auto flex items-center justify-center xl:hidden lg:hidden my-4'>
-                    <Socials size={18} margin={2} />
+                    <Socials
+                        size={18}
+                        margin={2}
+                    />
                 </div>
 
                 <div className='hidden md:flex absolute left-2/4 xl:bottom-26 animate-bounce'>
