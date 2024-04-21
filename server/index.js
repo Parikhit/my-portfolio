@@ -12,12 +12,13 @@ const PORT = process.env.PORT || 8000;
 
 const app = express();
 
-app.use(express.json());
 app.use(
     cors({
         origin: 'https://parikhit-baruah97.vercel.app',
     })
 );
+
+app.use(express.json());
 
 app.post('/', addUserData);
 
