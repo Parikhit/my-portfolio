@@ -1,8 +1,6 @@
 import { Button } from '../ui/button';
 import { useState } from 'react';
 
-const API_URL = 'http://localhost:8000/';
-
 const Contact = () => {
     const [disabledButton, setDisabledButton] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -17,20 +15,21 @@ const Contact = () => {
         setInputMessage('');
     };
 
-    const httpSubmitForm = async (data) => {
+    const httpSubmitForm = async (e) => {
+        e.preventDefault();
         setDisabledButton(true);
         setLoading(true);
         try {
-            const res = await fetch(`${API_URL}`, {
+            const res = await fetch('/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(data),
             });
+            const data = await res.json();
 
-            const response = await res.json();
-            setMessage(response);
+            setMessage(data);
 
             setTimeout(() => {
                 setMessage('');

@@ -20,6 +20,11 @@ app.use(
 
 app.post('/', addUserData);
 
+app.use('/', (req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Hello World!');
+});
+
 const startServer = () => {
     mongoose
         .connect(process.env.MONGO_URL)
