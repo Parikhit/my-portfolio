@@ -28,7 +28,7 @@ const Contact = () => {
             });
 
             const val = await res.json();
-            setMessage(val);
+            setMessage(val.message);
 
             setTimeout(() => {
                 setMessage('');
