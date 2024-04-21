@@ -28,7 +28,7 @@ const Contact = () => {
             });
 
             const val = await res.json();
-            setMessage(val.message);
+            setMessage(val);
 
             setTimeout(() => {
                 setMessage('');
@@ -118,7 +118,7 @@ const Contact = () => {
                         </Button>
                     )}
 
-                    <div className='text-xl text-green-500 text-center mt-4'>{message.message}</div>
+                    <div className='text-xl text-green-500 text-center mt-4'>{val.message}</div>
                 </form>
             </div>
         </div>
