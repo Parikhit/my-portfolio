@@ -1,7 +1,7 @@
 import { Button } from '../ui/button';
 import { useState } from 'react';
 
-const API_URL = 'https://my-portfolio-api-q606.onrender.com/';
+const API_URL = 'http://localhost:8000/';
 
 const Contact = () => {
     const [disabledButton, setDisabledButton] = useState(false);
