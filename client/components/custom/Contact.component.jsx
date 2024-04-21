@@ -19,7 +19,7 @@ const Contact = () => {
         setDisabledButton(true);
         setLoading(true);
         try {
-            const res = await fetch('https://my-portfolio-api-f3ht.onrender.com/', {
+            const res = await fetch('https://my-portfolio-api-f3ht.onrender.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
