@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(
     cors({
-        origin: 'https://parikhit-baruah97.vercel.app/',
+        origin: 'http://localhost:3000',
     })
 );
 

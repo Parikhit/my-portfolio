@@ -15,21 +15,20 @@ const Contact = () => {
         setInputMessage('');
     };
 
-    const httpSubmitForm = async (e) => {
-        e.preventDefault();
+    const httpSubmitForm = async (data) => {
         setDisabledButton(true);
         setLoading(true);
         try {
-            const res = await fetch('/', {
+            const res = await fetch('http://localhost:8000', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(data),
             });
-            const data = await res.json();
 
-            setMessage(data);
+            const val = await res.json();
+            setMessage(val);
 
             setTimeout(() => {
                 setMessage('');
@@ -43,18 +42,10 @@ const Contact = () => {
         }
     };
 
-    const handleFormSubmit = () => {
-        const data = new FormData(e.target);
-        const name = data.get('name');
-        const email = data.get('email');
-        const message = data.get('message');
-
-        const formData = {
-            name,
-            email,
-            message,
-            ok: true,
-        };
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+        let data = new FormData(e.target);
+        let formData = Object.fromEntries(data.entries());
 
         httpSubmitForm(formData);
 
