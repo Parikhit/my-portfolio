@@ -29,7 +29,7 @@ const Socials = ({ size, margin }: SocialsProps) => {
         },
         {
             icon: <FaInstagram size={size} />,
-            link: 'https://www.instagram.com/codeventures.js/',
+            link: 'https://www.instagram.com/_hell_keepr_/',
         },
     ];
     return (
