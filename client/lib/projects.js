@@ -59,6 +59,35 @@ export const projectsData = [
         link: 'https://imperial-properties.onrender.com/',
     },
     {
+        title: 'NASA Dashboard (MERN)',
+        preview: '/project-images/NASA-front.png',
+        description:
+            'The NASA Dashboard is a Fullstack mission control platform built on the MERN stack, utilizes the SpaceX API designed to keep a comprehensive record of current, upcoming, and historical space launches. Leveraging the power of MongoDB, Express.js, React.js, and Node.js, this dashboard offers a seamless and intuitive interface for accessing a wealth of space launch data.',
+        techStack: [
+            <FaReact
+                size={25}
+                style={{ color: '#61DBFB' }}
+                title='Reactjs'
+            />,
+            <FaNodeJs
+                size={25}
+                style={{ color: 'green' }}
+                title='Nodejs'
+            />,
+            <SiExpress
+                size={25}
+                title='Expressjs'
+            />,
+            <DiMongodb
+                size={25}
+                style={{ color: 'green' }}
+                title='MongoDB'
+            />,
+        ],
+        github: 'https://github.com/Parikhit/nasa-dashboard',
+        link: 'https://nasa-dashboard.vercel.app/',
+    },
+    {
         title: 'Royal Closet (e-Commerce App)',
         preview: '/project-images/royal-closet-front.png',
         description:
