@@ -15,20 +15,28 @@ const Contact = () => {
         setInputMessage('');
     };
 
-    const httpSubmitForm = async (data) => {
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();
+        let data = new FormData(e.target);
+        let formData = Object.fromEntries(data.entries());
+
         setDisabledButton(true);
         setLoading(true);
         try {
-            const res = await fetch('https://my-portfolio-api-f3ht.onrender.com/', {
+            const res = await fetch('https://sheetdb.io/api/v1/r4i4re23buse0', {
                 method: 'POST',
                 headers: {
+                    Accept: 'application/json',
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify(formData),
             });
 
-            const val = await res.json();
-            setMessage(val);
+            // await res.json();
+
+            if (!res.ok) setMessage('Unable to submit Form!');
+
+            setMessage('Form Submitted Successfully!');
 
             setTimeout(() => {
                 setMessage('');
@@ -40,14 +48,6 @@ const Contact = () => {
                 setMessage('');
             }, 3000);
         }
-    };
-
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
-        let data = new FormData(e.target);
-        let formData = Object.fromEntries(data.entries());
-
-        httpSubmitForm(formData);
 
         resetForm();
         setLoading(false);
@@ -71,7 +71,7 @@ const Contact = () => {
                     className='flex flex-col gap-2'
                 >
                     <input
-                        name='name'
+                        name='Name'
                         type='text'
                         value={inputName}
                         className='text-2xl px-5 py-3 rounded-lg border hover:border-blue-700 hover:scale-105 transition-transform'
@@ -79,9 +79,8 @@ const Contact = () => {
                         required
                         onChange={(e) => setInputName(e.target.value)}
                     />
-
                     <input
-                        name='email'
+                        name='Email'
                         type='email'
                         value={inputEmail}
                         className='text-2xl px-5 py-3 my-2 rounded-lg border hover:border-blue-700 hover:scale-105 transition-transform'
@@ -89,9 +88,8 @@ const Contact = () => {
                         required
                         onChange={(e) => setInputEmail(e.target.value)}
                     />
-
                     <textarea
-                        name='message'
+                        name='Message'
                         value={inputMessage}
                         className='text-2xl px-5 py-3 rounded-lg border hover:border-blue-700 hover:scale-105 transition-transform mb-2'
                         placeholder='Message'
@@ -99,26 +97,15 @@ const Contact = () => {
                         onChange={(e) => setInputMessage(e.target.value)}
                     ></textarea>
 
-                    {loading ? (
-                        <Button
-                            disabled={disabledButton}
-                            type='submit'
-                            className='text-2xl hover:bg-slate-600 bg-zinc-700 p-2'
-                        >
-                            Submitting...
-                        </Button>
-                    ) : (
-                        <Button
-                            disabled={disabledButton}
-                            type='submit'
-                            className='text-2xl hover:bg-slate-600 bg-zinc-700 p-2
-                            mb-4'
-                        >
-                            Submit
-                        </Button>
-                    )}
+                    <Button
+                        disabled={disabledButton}
+                        type='submit'
+                        className='text-2xl hover:bg-slate-600 bg-zinc-700 p-2'
+                    >
+                        {loading ? 'Submitting...' : 'Submit'}
+                    </Button>
 
-                    <div className='text-xl text-green-500 text-center mt-4'>{message.message}</div>
+                    <div className='text-xl text-green-500 text-center mt-4'>{message}</div>
                 </form>
             </div>
         </div>

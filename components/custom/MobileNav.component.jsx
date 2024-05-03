@@ -21,11 +21,14 @@ const MobileNav = () => {
                 <div className='h-full p-2'>
                     <div className='h-full flex flex-col items-center my-4 justify-between'>
                         <nav className='flex flex-col items-center gap-4 text-2xl'>
-                            {links.map((link) => {
+                            {links.map((link, i) => {
                                 const { path, name } = link;
 
                                 return (
-                                    <SheetClose asChild>
+                                    <SheetClose
+                                        asChild
+                                        key={i}
+                                    >
                                         <Link
                                             className={clsx(
                                                 'relative cursor-pointer hover:scale-110 transition-transform',
