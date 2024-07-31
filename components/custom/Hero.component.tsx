@@ -75,7 +75,7 @@ const Hero = () => {
                                     </Button>
                                 </ScrollLink>
                                 <a
-                                    href='Parikhits_updated_CV.pdf'
+                                    href='Parikhit_Baruah_Resume_Front-End.pdf'
                                     target='_blank'
                                 >
                                     <Button
